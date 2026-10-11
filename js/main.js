@@ -57,14 +57,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   // Mobile Nav Handlers
   // --------------------------------------------------------------------------
+  function setMobileMenu(open) {
+    if (!mobileNav) return;
+    mobileNav.classList.toggle('active', open);
+    mobileNav.setAttribute('aria-hidden', String(!open));
+    if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open && closeMobileNav) closeMobileNav.focus();
+    if (!open && mobileMenuBtn) mobileMenuBtn.focus();
+  }
   if (mobileMenuBtn && mobileNav) {
-    mobileMenuBtn.addEventListener('click', () => mobileNav.classList.add('active'));
+    mobileMenuBtn.addEventListener('click', () => setMobileMenu(true));
   }
   if (closeMobileNav && mobileNav) {
-    closeMobileNav.addEventListener('click', () => mobileNav.classList.remove('active'));
+    closeMobileNav.addEventListener('click', () => setMobileMenu(false));
   }
   document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => mobileNav.classList.remove('active'));
+    link.addEventListener('click', () => setMobileMenu(false));
+  });
+  if (mobileNav) {
+    mobileNav.addEventListener('click', event => {
+      if (event.target === mobileNav) setMobileMenu(false);
+    });
+  }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && mobileNav && mobileNav.classList.contains('active')) setMobileMenu(false);
   });
 
   // Settings State

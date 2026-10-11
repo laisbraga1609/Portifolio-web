@@ -580,7 +580,7 @@ button {
 
 .about-features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 2rem;
 }
 
@@ -719,7 +719,7 @@ button {
 /* Portfolio Cards Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 2rem;
 }
 
@@ -903,7 +903,7 @@ button {
 
 .services-tables-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
 }
 
@@ -1341,4 +1341,112 @@ button {
   .contact-content h2 {
     font-size: 1.6rem;
   }
+}
+
+/* Fluid layouts and touch controls */
+section[id] { scroll-margin-top: 100px; }
+.hero-grid > *, .section-header > *, .service-panel, .work-card,
+.cd-item > div, .modal-body > * { min-width: 0; }
+.btn svg, .cd-item svg, .service-panel-header svg { flex-shrink: 0; }
+.hero-ctas { flex-wrap: wrap; }
+.search-box-wrap { min-width: 0; width: min(100%, 320px); }
+.work-card-footer { gap: .75rem; flex-wrap: wrap; }
+.work-material-pill { min-width: 0; overflow-wrap: anywhere; }
+.work-expand-link { flex-shrink: 0; }
+.work-card-badges { gap: .5rem; flex-wrap: wrap; }
+.badge { overflow-wrap: anywhere; }
+.cd-item p, .modal-description, .modal-specs-list { overflow-wrap: anywhere; }
+.contact-section { padding: 5rem 0; }
+.contact-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+}
+.contact-content h2 { font-size: 2rem; margin: .75rem 0; }
+.contact-content > p { color: var(--text-muted); margin-bottom: 2rem; }
+.contact-badge { display: inline-flex; align-items: center; gap: .5rem; color: var(--gold-light); }
+.contact-details-row { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.mobile-nav-content { width: min(340px, 100%); overflow-y: auto; overscroll-behavior: contain; }
+.mobile-link, .close-mobile-nav, .mobile-menu-toggle, .filter-btn { min-height: 44px; }
+.mobile-menu-toggle, .close-mobile-nav { min-width: 44px; }
+.mobile-link { display: flex; align-items: center; }
+.mobile-nav-overlay:not(.active) { visibility: hidden; }
+.mobile-nav-overlay.active { visibility: visible; }
+.modal-body { overscroll-behavior: contain; }
+.lightbox-thumbnails-bar { min-width: 0; }
+button, a { touch-action: manipulation; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan-bright); outline-offset: 4px; }
+
+@media (max-width: 1200px) {
+  .nav-menu { display: none; }
+  .mobile-menu-toggle { display: flex; align-items: center; justify-content: center; }
+  .header-container { gap: 1rem; }
+  .brand-logo { min-width: 0; flex-shrink: 1; }
+  .brand-sub { white-space: normal; letter-spacing: 1px; }
+}
+
+@media (max-width: 768px) {
+  body { background-attachment: scroll; }
+  .container { padding-inline: 1rem; }
+  section[id] { scroll-margin-top: 82px; }
+  .header-container { height: 76px; }
+  .hero-section, .about-section, .services-section, .portfolio-section, .contact-section { padding-block: 3rem; }
+  .hero-grid { gap: 2rem; }
+  .hero-title { font-size: clamp(1.9rem, 6vw, 2.6rem); overflow-wrap: break-word; }
+  .hero-subtitle { font-size: 1rem; margin-bottom: 1.5rem; }
+  .hero-ctas { gap: .75rem; margin-bottom: 2rem; }
+  .hero-stats-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+  .hero-stat-divider { display: none; }
+  .stat-number { font-size: clamp(1rem, 3.5vw, 1.4rem); }
+  .stat-label { font-size: .75rem; }
+  .section-header { margin-bottom: 2rem; }
+  .section-header.flex-header { align-items: stretch; gap: 1.25rem; }
+  .section-header.flex-header > div, .search-box-wrap { width: 100%; }
+  .section-desc { font-size: 1rem; }
+  .search-input { font-size: 16px; min-height: 48px; }
+  .feature-card, .service-panel, .work-card-body, .showcase-info { padding: 1.25rem; }
+  .about-features-grid, .services-tables-grid, .portfolio-grid { gap: 1.25rem; }
+  .services-table { table-layout: fixed; }
+  .services-table td:first-child { width: 65%; padding-right: .75rem; overflow-wrap: anywhere; }
+  .services-table td.price { width: 35%; }
+  .services-table td small { display: block; white-space: normal; }
+  .contact-card { padding: 1.5rem 1.25rem; }
+  .contact-details-row { grid-template-columns: 1fr; gap: .75rem; }
+  .footer-container { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+  .modal-backdrop { padding: .5rem; }
+  .modal-dialog { max-height: 94vh; max-height: 94dvh; border-radius: var(--radius-lg); }
+  .modal-body { max-height: 94vh; max-height: 94dvh; }
+  .modal-info-side { padding: 1.5rem 1.25rem; overflow-y: visible; }
+  .modal-work-title { font-size: 1.4rem; overflow-wrap: anywhere; }
+  .main-lightbox-stage { min-height: 220px; padding: 3.5rem .5rem 2.5rem; }
+  .main-lightbox-stage img { max-height: 42vh; max-height: 42dvh; }
+  .lightbox-zoom-badge { left: .75rem; right: auto; max-width: calc(100% - 70px); font-size: .7rem; padding: .4rem .6rem; }
+  .modal-close-btn { top: .75rem; right: .75rem; width: 44px; height: 44px; }
+  .prev-btn { left: .5rem; }
+  .next-btn { right: .5rem; }
+  .btn { min-height: 44px; white-space: normal; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .header-actions > .btn { display: none; }
+  .header-actions { gap: 0; }
+  .header-tooth-icon { height: 36px; }
+  .brand-name { font-size: 1.15rem; letter-spacing: .75px; }
+  .brand-sub { font-size: .5rem; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn, .contact-buttons .btn { width: 100%; }
+  .btn-lg { font-size: .95rem; padding: .9rem 1rem; }
+  .hero-badge { font-size: .75rem; }
+  .mobile-nav-content { padding: 1.5rem 1rem; gap: 1.5rem; }
+  .top-accent-bar { font-size: .65rem; padding: .4rem .75rem; }
+}
+
+@media (max-width: 360px) {
+  .brand-sub { display: none; }
+  .hero-stats-row { gap: .5rem; }
+  .stat-number { font-size: .95rem; }
+  .stat-label { font-size: .7rem; }
+  .services-table { font-size: .82rem; }
+  .work-card-badges { top: .75rem; left: .75rem; right: .75rem; }
 }

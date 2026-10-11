@@ -48,7 +48,7 @@
           <i data-lucide="message-square"></i>
           <span>Solicitar Orçamento</span>
         </a>
-        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Abrir Menu">
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Abrir Menu" aria-controls="mobileNav" aria-expanded="false">
           <i data-lucide="menu"></i>
         </button>
       </div>
@@ -56,11 +56,11 @@
   </header>
 
   <!-- Mobile Menu Navigation -->
-  <div class="mobile-nav-overlay" id="mobileNav">
+  <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
     <div class="mobile-nav-content">
       <div class="mobile-nav-header">
         <span class="brand-name">CRUZ3DESIGN</span>
-        <button class="close-mobile-nav" id="closeMobileNav"><i data-lucide="x"></i></button>
+        <button class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu"><i data-lucide="x"></i></button>
       </div>
       <nav class="mobile-nav-links">
         <a href="#hero" class="mobile-link">Início</a>
