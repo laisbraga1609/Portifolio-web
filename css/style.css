@@ -1450,3 +1450,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan-bright); o
   .services-table { font-size: .82rem; }
   .work-card-badges { top: .75rem; left: .75rem; right: .75rem; }
 }
+
+/* Show the real smile before the introduction on small screens. */
+.showcase-img-wrap { aspect-ratio: 16 / 10; }
+@media (max-width: 768px) {
+  .hero-visual { order: -1; }
+  .hero-grid { gap: 1.5rem; }
+  .hero-section { padding-top: 1.5rem; }
+  .showcase-img-wrap { aspect-ratio: 16 / 9; }
+}

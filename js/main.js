@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let works = [];
   let currentCategoryId = 'all';
   let searchQuery = '';
+  let heroWork = null;
   let activeWork = null;
   let activeImageIndex = 0;
 
@@ -239,9 +240,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!works || works.length === 0) return;
     
     // Find featured work or take the first one
-    const featured = works.find(w => w.featured === 1) || works[0];
+    const featured = heroWork || works.find(w => String(w.id) === String(appSettings.hero_work_id)) || works.find(w => w.featured === 1) || works[0];
     if (featured) {
-      if (heroCardImg) heroCardImg.src = featured.cover_image;
+      heroWork = featured;
+      if (heroCardImg) {
+        heroCardImg.src = featured.cover_image;
+        heroCardImg.alt = featured.title;
+        if (featured.cover_thumbnail) {
+          heroCardImg.srcset = `${featured.cover_thumbnail} 600w, ${featured.cover_image} 1280w`;
+          heroCardImg.sizes = '(max-width: 992px) 100vw, 45vw';
+        }
+      }
       if (heroCardCategory) heroCardCategory.textContent = featured.category_name || 'Prótese Odontológica';
       if (heroCardTitle) heroCardTitle.textContent = featured.title;
       if (heroCardDesc) heroCardDesc.textContent = featured.description || 'Trabalho protético em destaque.';
@@ -272,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
     portfolioGrid.innerHTML = works.map(work => `
       <div class="work-card" data-id="${work.id}">
         <div class="work-card-img-wrap">
-          <img src="${escapeHtml(work.cover_image)}" alt="${escapeHtml(work.title)}" loading="lazy">
+          <img src="${escapeHtml(work.cover_thumbnail || work.cover_image)}" alt="${escapeHtml(work.title)}" loading="lazy">
           <div class="work-card-badges">
             <span class="badge badge-cat">${escapeHtml(work.category_name || 'Prótese')}</span>
             ${work.featured === 1 ? '<span class="badge badge-featured"><i data-lucide="star"></i> Destaque</span>' : ''}
@@ -285,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="work-card-footer">
             <div class="work-material-pill">
               <i data-lucide="shield"></i>
-              <span>${escapeHtml(work.material || 'Cerâmica Pura')}</span>
+              <span>${escapeHtml(work.material || 'Não informado')}</span>
             </div>
             <span class="work-expand-link">
               <span>Ver Detalhes</span>
@@ -343,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Populate metadata
     if (modalCategory) modalCategory.textContent = work.category_name || 'Prótese Odontológica';
-    if (modalMaterial) modalMaterial.textContent = work.material || 'Cerâmica';
+    if (modalMaterial) modalMaterial.textContent = work.material || 'Não informado';
     if (modalTitle) modalTitle.textContent = work.title;
     if (modalDescription) modalDescription.textContent = work.description || 'Nenhuma descrição técnica informada.';
     if (modalSpecMaterial) modalSpecMaterial.textContent = work.material || 'Não especificado';
@@ -401,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lightboxThumbnails) {
       lightboxThumbnails.innerHTML = images.map((img, idx) => `
         <div class="thumb-item ${idx === activeImageIndex ? 'active' : ''}" data-idx="${idx}">
-          <img src="${escapeHtml(img.image_url)}" alt="Miniatura ${idx + 1}">
+          <img src="${escapeHtml(img.thumbnail_url || img.image_url)}" alt="Miniatura ${idx + 1}">
         </div>
       `).join('');
 

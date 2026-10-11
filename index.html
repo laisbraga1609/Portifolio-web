@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRUZ3DESIGN | Prótese Dentária Digital • Estética • Inovação</title>
   <meta name="description" content="CRUZ3DESIGN - Prótese Dentária Digital. Excelência em reabilitação oral, coroas em Zircônia, facetas e veneers cerâmicos, planejamento digital CAD/CAM.">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-  
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
+
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css?v=b6ccae21923e">
+  <link rel="stylesheet" href="css/style.css?v=b542f59e5aa8">
 </head>
 <body>
 
@@ -91,7 +91,7 @@
           <p class="hero-subtitle">
             Soluções completas em prótese dentária digital, reabilitação oral em Zircônia, laminados cerâmicos (veneers) e escultura anatômica de alta precisão.
           </p>
-          
+
           <div class="hero-ctas">
             <a href="#portfolio" class="btn btn-gold btn-lg">
               <span>Ver Casos Clínicos</span>
@@ -126,13 +126,13 @@
             <!-- Dynamic featured work rendered by JS -->
             <div class="showcase-card-inner">
               <div class="showcase-img-wrap">
-                <img src="uploads/full_zirconia_smile.png" alt="Caso Clínico Cruz3Design" id="heroCardImg">
+                <img src="uploads/sorriso-real-full-fafcbb452176.webp" alt="Sorriso real — Cruz3Design" id="heroCardImg" fetchpriority="high" decoding="async">
                 <div class="showcase-badge"><i data-lucide="star"></i> Caso em Destaque</div>
               </div>
               <div class="showcase-info">
-                <span class="showcase-cat" id="heroCardCategory">Full Zirconia</span>
-                <h3 class="showcase-title" id="heroCardTitle">Reabilitação Coroas Superior (10 Elementos)</h3>
-                <p class="showcase-desc" id="heroCardDesc">Planejamento digital completo para estética, função e harmonia do sorriso.</p>
+                <span class="showcase-cat" id="heroCardCategory">Sorriso real</span>
+                <h3 class="showcase-title" id="heroCardTitle">Sorriso real e modelo protético</h3>
+                <p class="showcase-desc" id="heroCardDesc">Foto de sorriso e detalhes do modelo protético apresentados no material da Cruz3Design.</p>
               </div>
             </div>
           </div>
@@ -178,6 +178,94 @@
         </div>
       </div>
     </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="section-header flex-header">
+          <div>
+            <span class="section-tag">CASOS CLINICOS</span>
+            <h2 class="section-title">Portfólio de Trabalhos Realizados</h2>
+            <p class="section-desc">Explore nossos planejamentos em Zircônia, Facetas, Coroas e Enceramentos.</p>
+          </div>
+
+          <div class="search-box-wrap">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Buscar caso clínico..." class="search-input">
+            <button id="clearSearchBtn" class="clear-search-btn" style="display: none;"><i data-lucide="x"></i></button>
+          </div>
+        </div>
+
+        <!-- Dynamic Category Filters -->
+        <div class="category-filters-scroll">
+          <div class="category-filters" id="categoryFilters">
+            <button class="filter-btn active" data-cat="all">Todos os Trabalhos</button>
+          </div>
+        </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="portfolio-grid" id="portfolioGrid">
+          <div class="loading-spinner-wrap">
+            <div class="spinner"></div>
+            <p>Carregando casos clínicos da Cruz3Design...</p>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <i data-lucide="image-off"></i>
+          <h3>Nenhum caso clínico encontrado</h3>
+          <p>Tente selecionar outra categoria ou buscar por um termo diferente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-glow"></div>
+          <div class="contact-content">
+            <span class="contact-badge"><i data-lucide="phone-call"></i> Pedidos &amp; Orçamentos</span>
+            <h2>Fale com a CRUZ3DESIGN</h2>
+            <p>Envie escaneamentos intrabucais ou solicite orçamentos rápidos para seu consultório ou laboratório parceiro.</p>
+
+            <div class="contact-details-row">
+              <a href="https://wa.me/5543996773154" target="_blank" class="cd-item js-whatsapp-link" style="text-decoration: none;">
+                <i data-lucide="phone"></i>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <p class="js-whatsapp-num">(43) 99677-3154</p>
+                </div>
+              </a>
+              <a href="mailto:cruz3desing@outlook.com" target="_blank" class="cd-item js-email-link" style="text-decoration: none;">
+                <i data-lucide="mail"></i>
+                <div>
+                  <strong>E-mail Orçamentos</strong>
+                  <p class="js-email-text">cruz3desing@outlook.com</p>
+                </div>
+              </a>
+              <a href="https://instagram.com/Cruz3Desing" target="_blank" class="cd-item js-instagram-link" style="text-decoration: none;">
+                <i data-lucide="instagram"></i>
+                <div>
+                  <strong>Instagram</strong>
+                  <p>@Cruz3Desing</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="contact-buttons">
+              <a href="https://wa.me/5543996773154?text=Ol%C3%A1!%20Gostaria%20de%20enviar%20um%20caso%20para%20planejamento%20digital." target="_blank" class="btn btn-gold btn-lg js-whatsapp-link">
+                <i data-lucide="message-square"></i>
+                <span>Enviar Pedido pelo WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
 
     <!-- SERVICES CATALOG SECTION -->
     <section class="services-section" id="services">
@@ -288,94 +376,6 @@
       </div>
     </section>
 
-    <!-- PORTFOLIO SECTION -->
-    <section class="portfolio-section" id="portfolio">
-      <div class="container">
-        <div class="section-header flex-header">
-          <div>
-            <span class="section-tag">CASOS CLINICOS</span>
-            <h2 class="section-title">Portfólio de Trabalhos Realizados</h2>
-            <p class="section-desc">Explore nossos planejamentos em Zircônia, Facetas, Coroas e Enceramentos.</p>
-          </div>
-
-          <div class="search-box-wrap">
-            <i data-lucide="search" class="search-icon"></i>
-            <input type="text" id="searchInput" placeholder="Buscar caso clínico..." class="search-input">
-            <button id="clearSearchBtn" class="clear-search-btn" style="display: none;"><i data-lucide="x"></i></button>
-          </div>
-        </div>
-
-        <!-- Dynamic Category Filters -->
-        <div class="category-filters-scroll">
-          <div class="category-filters" id="categoryFilters">
-            <button class="filter-btn active" data-cat="all">Todos os Trabalhos</button>
-          </div>
-        </div>
-
-        <!-- Portfolio Cards Grid -->
-        <div class="portfolio-grid" id="portfolioGrid">
-          <div class="loading-spinner-wrap">
-            <div class="spinner"></div>
-            <p>Carregando casos clínicos da Cruz3Design...</p>
-          </div>
-        </div>
-
-        <!-- Empty state -->
-        <div class="empty-state" id="emptyState" style="display: none;">
-          <i data-lucide="image-off"></i>
-          <h3>Nenhum caso clínico encontrado</h3>
-          <p>Tente selecionar outra categoria ou buscar por um termo diferente.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT CTA SECTION -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div class="contact-glow"></div>
-          <div class="contact-content">
-            <span class="contact-badge"><i data-lucide="phone-call"></i> Pedidos &amp; Orçamentos</span>
-            <h2>Fale com a CRUZ3DESIGN</h2>
-            <p>Envie escaneamentos intrabucais ou solicite orçamentos rápidos para seu consultório ou laboratório parceiro.</p>
-            
-            <div class="contact-details-row">
-              <a href="https://wa.me/5543996773154" target="_blank" class="cd-item js-whatsapp-link" style="text-decoration: none;">
-                <i data-lucide="phone"></i>
-                <div>
-                  <strong>WhatsApp</strong>
-                  <p class="js-whatsapp-num">(43) 99677-3154</p>
-                </div>
-              </a>
-              <a href="mailto:cruz3desing@outlook.com" target="_blank" class="cd-item js-email-link" style="text-decoration: none;">
-                <i data-lucide="mail"></i>
-                <div>
-                  <strong>E-mail Orçamentos</strong>
-                  <p class="js-email-text">cruz3desing@outlook.com</p>
-                </div>
-              </a>
-              <a href="https://instagram.com/Cruz3Desing" target="_blank" class="cd-item js-instagram-link" style="text-decoration: none;">
-                <i data-lucide="instagram"></i>
-                <div>
-                  <strong>Instagram</strong>
-                  <p>@Cruz3Desing</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="contact-buttons">
-              <a href="https://wa.me/5543996773154?text=Ol%C3%A1!%20Gostaria%20de%20enviar%20um%20caso%20para%20planejamento%20digital." target="_blank" class="btn btn-gold btn-lg js-whatsapp-link">
-                <i data-lucide="message-square"></i>
-                <span>Enviar Pedido pelo WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS SECTION -->
-
   </main>
 
   <!-- WORK DETAIL MODAL / LIGHTBOX -->
@@ -392,7 +392,7 @@
             <a href="#" id="lightboxFullResLink" target="_blank" title="Clique para abrir a imagem em alta resolução">
               <img src="" id="lightboxMainImg" alt="Visualização ampliada">
             </a>
-            
+
             <button class="lightbox-nav-btn prev-btn" id="lightboxPrevBtn" aria-label="Imagem Anterior">
               <i data-lucide="chevron-left"></i>
             </button>
@@ -416,7 +416,7 @@
           </div>
 
           <h2 class="modal-work-title" id="modalTitle">Título do Trabalho</h2>
-          
+
           <div class="modal-divider"></div>
 
           <div class="modal-section">
@@ -461,7 +461,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/portfolio-data.js?v=bb8e200a90d6"></script>
-  <script src="js/main.js?v=0177dea6168d"></script>
+  <script src="js/portfolio-data.js?v=98d3640b96ec"></script>
+  <script src="js/main.js?v=c28bdfab437d"></script>
 </body>
 </html>
