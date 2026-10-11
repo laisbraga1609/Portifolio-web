@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUZ3DESIGN | Prótese Dentária Digital • Estética • Inovação</title>
+  <meta name="description" content="CRUZ3DESIGN - Prótese Dentária Digital. Excelência em reabilitação oral, coroas em Zircônia, facetas e veneers cerâmicos, planejamento digital CAD/CAM.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-accent-bar">
+    <span>CRUZ3DESIGN • PRÓTESE DENTÁRIA DIGITAL • ESTÉTICA • INOVAÇÃO • (43) 99677-3154</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="main-header" id="navbar">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <img src="assets/tooth_icon.png" alt="CRUZ3DESIGN" class="header-tooth-icon">
+        <div class="logo-text">
+          <span class="brand-name">CRUZ<span class="cyan-text">3D</span>ESIGN</span>
+          <span class="brand-sub">PRÓTESE DENTÁRIA DIGITAL • ESTÉTICA • INOVAÇÃO</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#about" class="nav-link">Sobre</a>
+        <a href="#services" class="nav-link">Catálogo</a>
+        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="#contact" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/5543996773154" target="_blank" class="btn btn-gold btn-sm js-whatsapp-link">
+          <i data-lucide="message-square"></i>
+          <span>Solicitar Orçamento</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Abrir Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Navigation -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <span class="brand-name">CRUZ3DESIGN</span>
+        <button class="close-mobile-nav" id="closeMobileNav"><i data-lucide="x"></i></button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-link">Início</a>
+        <a href="#about" class="mobile-link">Sobre</a>
+        <a href="#services" class="mobile-link">Catálogo</a>
+        <a href="#portfolio" class="mobile-link">Portfólio</a>
+        <a href="#contact" class="mobile-link">Contato</a>
+      </nav>
+      <a href="https://wa.me/5543996773154" target="_blank" class="btn btn-gold w-full text-center">
+        <i data-lucide="message-square"></i> WhatsApp (43) 99677-3154
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i data-lucide="sparkles"></i>
+            <span>Excelência em Cada Detalhe</span>
+          </div>
+          <h1 class="hero-title">
+            Transformamos Planejamento em Sorrisos Reais através da <span class="gold-gradient-text">Tecnologia Digital</span>
+          </h1>
+          <p class="hero-subtitle">
+            Soluções completas em prótese dentária digital, reabilitação oral em Zircônia, laminados cerâmicos (veneers) e escultura anatômica de alta precisão.
+          </p>
+          
+          <div class="hero-ctas">
+            <a href="#portfolio" class="btn btn-gold btn-lg">
+              <span>Ver Casos Clínicos</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#services" class="btn btn-outline btn-lg">
+              <span>Catálogo de Serviços</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <span class="stat-number">CAD/CAM</span>
+              <span class="stat-label">Modelagem Digital 3D</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <span class="stat-number">Full Zirconia</span>
+              <span class="stat-label">Alta Resistência e Estética</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Previsibilidade Clínica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-glow"></div>
+          <div class="hero-showcase-card" id="heroFeaturedCard">
+            <!-- Dynamic featured work rendered by JS -->
+            <div class="showcase-card-inner">
+              <div class="showcase-img-wrap">
+                <img src="uploads/full_zirconia_smile.png" alt="Caso Clínico Cruz3Design" id="heroCardImg">
+                <div class="showcase-badge"><i data-lucide="star"></i> Caso em Destaque</div>
+              </div>
+              <div class="showcase-info">
+                <span class="showcase-cat" id="heroCardCategory">Full Zirconia</span>
+                <h3 class="showcase-title" id="heroCardTitle">Reabilitação Coroas Superior (10 Elementos)</h3>
+                <p class="showcase-desc" id="heroCardDesc">Planejamento digital completo para estética, função e harmonia do sorriso.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">SOBRE A CRUZ3DESIGN</span>
+          <h2 class="section-title">A Arte da Anatomia unida à Tecnologia 3D</h2>
+          <p class="section-desc">
+            VAMOS TRANSFORMAR PLANOS EM SORRISOS! Desenvolvemos próteses digitais personalizadas com rigor estético, anatomia realista e ajuste oclusal perfeito.
+          </p>
+        </div>
+
+        <div class="about-features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i data-lucide="crosshair"></i>
+            </div>
+            <h3>Precisão Digital</h3>
+            <p>Modelagens CAD 3D com altíssimo nível de precisão, adaptação marginal perfeita e facilidade de assentamento.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i data-lucide="smile"></i>
+            </div>
+            <h3>Estética Natural</h3>
+            <p>Anatomia morfológica, textura de superfície e forma que imitam com perfeição a estrutura dental biológica.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i data-lucide="sliders"></i>
+            </div>
+            <h3>Função e Harmonia</h3>
+            <p>Planejamento estético-funcional baseado em oclusão, dimensão vertical e simetria facial para previsibilidade clínica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES CATALOG SECTION -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">TABELA DE SERVIÇOS</span>
+          <h2 class="section-title">Catálogo de Soluções Digitais</h2>
+          <p class="section-desc">Todos os itens incluem alinhamento de foto, modelos e articulação no articulador virtual.</p>
+        </div>
+
+        <div class="services-tables-grid">
+          <!-- 1. Enceramentos Digitais -->
+          <div class="service-panel">
+            <div class="service-panel-header">
+              <i data-lucide="layers"></i>
+              <h3>1. Enceramentos Digitais</h3>
+            </div>
+            <table class="services-table">
+              <tr>
+                <td>Enceramento Diagnóstico</td>
+                <td class="price">R$ 35,00</td>
+              </tr>
+              <tr>
+                <td>Facetas / Veneers</td>
+                <td class="price">R$ 35,00</td>
+              </tr>
+              <tr>
+                <td>Coroa sobre Dente / Implante</td>
+                <td class="price">R$ 35,00</td>
+              </tr>
+              <tr>
+                <td>Inlay / Onlay</td>
+                <td class="price">R$ 35,00</td>
+              </tr>
+              <tr>
+                <td>Ponte Fixa / Provisório</td>
+                <td class="price">R$ 35,00</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- 2. Subestruturas -->
+          <div class="service-panel">
+            <div class="service-panel-header">
+              <i data-lucide="box"></i>
+              <h3>2. Subestruturas</h3>
+            </div>
+            <table class="services-table">
+              <tr>
+                <td>Protocolo Dentogengival sobre Implante</td>
+                <td class="price">R$ 30,00</td>
+              </tr>
+              <tr>
+                <td>Protocolo sobre Implante (Padrão ou Reduzido)</td>
+                <td class="price">R$ 30,00</td>
+              </tr>
+              <tr>
+                <td>Copings Simples</td>
+                <td class="price">R$ 30,00</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- 3. Protocolos e Reabilitação -->
+          <div class="service-panel">
+            <div class="service-panel-header">
+              <i data-lucide="shield"></i>
+              <h3>3. Protocolos e Reabilitação</h3>
+            </div>
+            <table class="services-table">
+              <tr>
+                <td>Protocolo Dentogengival sobre Implante</td>
+                <td class="price">R$ 50,00</td>
+              </tr>
+              <tr>
+                <td>Protocolo sobre Implante (Padrão ou Reduzido)</td>
+                <td class="price">R$ 45,00</td>
+              </tr>
+              <tr>
+                <td>Barra de Protocolo</td>
+                <td class="price">R$ 200,00</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- 4. Modelos e Guias -->
+          <div class="service-panel">
+            <div class="service-panel-header">
+              <i data-lucide="disc"></i>
+              <h3>4. Modelos e Guias</h3>
+            </div>
+            <table class="services-table">
+              <tr>
+                <td>Modelo Geller (inclui antagonista e rígido)</td>
+                <td class="price">R$ 30,00 <small>(por troquel)</small></td>
+              </tr>
+              <tr>
+                <td>Modelos Avulsos</td>
+                <td class="price">R$ 40,00</td>
+              </tr>
+              <tr>
+                <td>Placa Miorrelaxante (modelos e articulação)</td>
+                <td class="price">R$ 150,00</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="section-header flex-header">
+          <div>
+            <span class="section-tag">CASOS CLINICOS</span>
+            <h2 class="section-title">Portfólio de Trabalhos Realizados</h2>
+            <p class="section-desc">Explore nossos planejamentos em Zircônia, Facetas, Coroas e Enceramentos.</p>
+          </div>
+
+          <div class="search-box-wrap">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Buscar caso clínico..." class="search-input">
+            <button id="clearSearchBtn" class="clear-search-btn" style="display: none;"><i data-lucide="x"></i></button>
+          </div>
+        </div>
+
+        <!-- Dynamic Category Filters -->
+        <div class="category-filters-scroll">
+          <div class="category-filters" id="categoryFilters">
+            <button class="filter-btn active" data-cat="all">Todos os Trabalhos</button>
+          </div>
+        </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="portfolio-grid" id="portfolioGrid">
+          <div class="loading-spinner-wrap">
+            <div class="spinner"></div>
+            <p>Carregando casos clínicos da Cruz3Design...</p>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <i data-lucide="image-off"></i>
+          <h3>Nenhum caso clínico encontrado</h3>
+          <p>Tente selecionar outra categoria ou buscar por um termo diferente.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-glow"></div>
+          <div class="contact-content">
+            <span class="contact-badge"><i data-lucide="phone-call"></i> Pedidos &amp; Orçamentos</span>
+            <h2>Fale com a CRUZ3DESIGN</h2>
+            <p>Envie escaneamentos intrabucais ou solicite orçamentos rápidos para seu consultório ou laboratório parceiro.</p>
+            
+            <div class="contact-details-row">
+              <a href="https://wa.me/5543996773154" target="_blank" class="cd-item js-whatsapp-link" style="text-decoration: none;">
+                <i data-lucide="phone"></i>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <p class="js-whatsapp-num">(43) 99677-3154</p>
+                </div>
+              </a>
+              <a href="mailto:cruz3desing@outlook.com" target="_blank" class="cd-item js-email-link" style="text-decoration: none;">
+                <i data-lucide="mail"></i>
+                <div>
+                  <strong>E-mail Orçamentos</strong>
+                  <p class="js-email-text">cruz3desing@outlook.com</p>
+                </div>
+              </a>
+              <a href="https://instagram.com/Cruz3Desing" target="_blank" class="cd-item js-instagram-link" style="text-decoration: none;">
+                <i data-lucide="instagram"></i>
+                <div>
+                  <strong>Instagram</strong>
+                  <p>@Cruz3Desing</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="contact-buttons">
+              <a href="https://wa.me/5543996773154?text=Ol%C3%A1!%20Gostaria%20de%20enviar%20um%20caso%20para%20planejamento%20digital." target="_blank" class="btn btn-gold btn-lg js-whatsapp-link">
+                <i data-lucide="message-square"></i>
+                <span>Enviar Pedido pelo WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+
+  </main>
+
+  <!-- WORK DETAIL MODAL / LIGHTBOX -->
+  <div class="modal-backdrop" id="workModal" tabindex="-1">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Fechar Modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-body">
+        <!-- Left: Image Slideshow & Lightbox -->
+        <div class="modal-gallery-side">
+          <div class="main-lightbox-stage">
+            <a href="#" id="lightboxFullResLink" target="_blank" title="Clique para abrir a imagem em alta resolução">
+              <img src="" id="lightboxMainImg" alt="Visualização ampliada">
+            </a>
+            
+            <button class="lightbox-nav-btn prev-btn" id="lightboxPrevBtn" aria-label="Imagem Anterior">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="lightbox-nav-btn next-btn" id="lightboxNextBtn" aria-label="Próxima Imagem">
+              <i data-lucide="chevron-right"></i>
+            </button>
+
+            <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+          </div>
+
+          <div class="lightbox-thumbnails-bar" id="lightboxThumbnails">
+            <!-- Thumbnails inserted dynamically -->
+          </div>
+        </div>
+
+        <!-- Right: Details Info -->
+        <div class="modal-info-side">
+          <div class="modal-info-header">
+            <span class="badge badge-cat" id="modalCategory">Categoria</span>
+            <span class="badge badge-mat" id="modalMaterial">Material</span>
+          </div>
+
+          <h2 class="modal-work-title" id="modalTitle">Título do Trabalho</h2>
+          
+          <div class="modal-divider"></div>
+
+          <div class="modal-section">
+            <h4 class="modal-subheading"><i data-lucide="file-text"></i> Planejamento &amp; Diagnóstico</h4>
+            <p class="modal-description" id="modalDescription">Descrição do trabalho protético...</p>
+          </div>
+
+          <div class="modal-section">
+            <h4 class="modal-subheading"><i data-lucide="layers"></i> Especificações TÉCNICAS</h4>
+            <ul class="modal-specs-list">
+              <li><strong>Material / Sistema:</strong> <span id="modalSpecMaterial">-</span></li>
+              <li><strong>Categoria:</strong> <span id="modalSpecCategory">-</span></li>
+              <li><strong>Laboratório:</strong> Cruz3Design • Prótese Dentária Digital</li>
+            </ul>
+          </div>
+
+          <div class="modal-ctas">
+            <a href="#" id="modalWhatsappBtn" target="_blank" class="btn btn-gold w-full">
+              <i data-lucide="message-square"></i>
+              <span>Consultar este Caso pelo WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo-text">
+          <span class="brand-name">CRUZ<span class="cyan-text">3D</span>ESIGN</span>
+          <span class="brand-sub">PRÓTESE DENTÁRIA DIGITAL • ESTÉTICA • INOVAÇÃO</span>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> CRUZ3DESIGN. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-tagline">
+        <span>Vamos transformar planos em sorrisos! • (43) 99677-3154</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/portfolio-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
